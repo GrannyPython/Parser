@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a031cc83-3349-407d-bef7-01b86062ce5f" name="New changelist" comment="" />
+    <list default="true" id="a031cc83-3349-407d-bef7-01b86062ce5f" name="New changelist" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Parser/com/company/JavaToMySQL.class" afterPath="$PROJECT_DIR$/out/production/Parser/com/company/JavaToMySQL.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Parser/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/Parser/com/company/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/JavaToMySQL.java" afterPath="$PROJECT_DIR$/src/com/company/JavaToMySQL.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Parser.iml" afterPath="$PROJECT_DIR$/Parser.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path=".idea/dataSources.local.xml" />
     <manually-removed-from-ignored>
       <directory path="$PROJECT_DIR$/out/" />
     </manually-removed-from-ignored>
@@ -25,26 +34,27 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52910054">
-              <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.6484375">
+              <caret line="66" column="62" selection-start-line="66" selection-start-column="62" selection-end-line="66" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JavaToMySQL.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/JavaToMySQL.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#method0#0;class#JavaToMySQL#0" expanded="false" />
-                <marker date="1443992618749" expanded="true" signature="539:566" placeholder="select count..Tbtest..." />
-                <marker date="1443992618749" expanded="true" signature="1343:1377" placeholder="select id, n..books..." />
-                <marker date="1443992618749" expanded="true" signature="2250:2361" placeholder="INSERT INTO ..." />
+                <element signature="e#759#767#0" expanded="true" />
+                <element signature="e#854#862#0" expanded="true" />
+                <element signature="e#918#926#0" expanded="true" />
+                <element signature="e#1513#1521#0" expanded="true" />
+                <element signature="e#2448#2456#0" expanded="true" />
+                <marker date="1444582410265" expanded="true" signature="2903:2942" placeholder="INSERT INTO ..." />
+                <marker date="1444582410265" expanded="true" signature="2903:2996" placeholder="INSERT INTO ..." />
+                <marker date="1444582410265" expanded="true" signature="2903:2997" placeholder="INSERT INTO ..." />
+                <marker date="1444582410265" expanded="true" signature="2903:2999" placeholder="INSERT INTO ..." />
+                <marker date="1444582410265" expanded="true" signature="3042:3151" placeholder="INSERT INTO ..." />
+                <marker date="1444582410265" expanded="true" signature="3042:3152" placeholder="INSERT INTO ..." />
+                <marker date="1444582410265" expanded="true" signature="3042:3175" placeholder="INSERT INTO ..." />
+                <marker date="1444582410265" expanded="true" signature="3042:3183" placeholder="INSERT INTO ..." />
+                <marker date="1444582410265" expanded="true" signature="3042:3207" placeholder="INSERT INTO ..." />
+                <marker date="1444582410265" expanded="true" signature="3042:3265" placeholder="INSERT INTO ..." />
+                <marker date="1444582410265" expanded="true" signature="3042:3326" placeholder="INSERT INTO ..." />
+                <marker date="1444582410265" expanded="true" signature="3042:3329" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
@@ -60,7 +70,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Parser" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="PUSH_TAGS">
       <GitPushTagMode>
         <option name="argument" value="--follow-tags" />
@@ -107,7 +117,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -123,8 +133,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -133,9 +141,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -147,10 +185,10 @@
     <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="Repository.Attach.Sources" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PhilosophierProblem" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
@@ -424,7 +462,15 @@
       <workItem from="1443903161883" duration="4164000" />
       <workItem from="1443912600160" duration="20961000" />
       <workItem from="1443991765483" duration="5665000" />
-      <workItem from="1443998229125" duration="11000" />
+      <workItem from="1443998229125" duration="391000" />
+      <workItem from="1444034137357" duration="1484000" />
+      <workItem from="1444038155291" duration="312000" />
+      <workItem from="1444040337028" duration="1948000" />
+      <workItem from="1444309367524" duration="621000" />
+      <workItem from="1444316980876" duration="604000" />
+      <workItem from="1444382560063" duration="851000" />
+      <workItem from="1444397626979" duration="12351000" />
+      <workItem from="1444513770013" duration="29639000" />
     </task>
     <task id="LOCAL-00001" summary="New changelist">
       <changelist id="a031cc83-3349-407d-bef7-01b86062ce5f" name="New changelist" comment="" />
@@ -438,11 +484,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35787000" />
+    <option name="totallyTimeSpent" value="83977000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="718" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -451,21 +497,21 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26094276" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.50294983" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32996634" sideWeight="0.49705014" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.49705014" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37205386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1202346" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3855219" sideWeight="0.49115044" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44444445" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37205386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3855219" sideWeight="0.49115044" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -490,12 +536,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
-          <line>15</line>
+          <line>81</line>
           <properties />
-          <option name="timeStamp" value="11" />
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="32" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -510,6 +556,198 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#759#767#0" expanded="true" />
+            <element signature="e#854#862#0" expanded="true" />
+            <element signature="e#918#926#0" expanded="true" />
+            <element signature="e#1513#1521#0" expanded="true" />
+            <element signature="e#2448#2456#0" expanded="true" />
+            <marker date="1444582410265" expanded="true" signature="2903:2942" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2996" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2997" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2999" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3151" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3152" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3175" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3183" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3207" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3265" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3326" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3329" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#759#767#0" expanded="true" />
+            <element signature="e#854#862#0" expanded="true" />
+            <element signature="e#918#926#0" expanded="true" />
+            <element signature="e#1513#1521#0" expanded="true" />
+            <element signature="e#2448#2456#0" expanded="true" />
+            <marker date="1444582410265" expanded="true" signature="2903:2942" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2996" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2997" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2999" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3151" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3152" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3175" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3183" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3207" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3265" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3326" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3329" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#759#767#0" expanded="true" />
+            <element signature="e#854#862#0" expanded="true" />
+            <element signature="e#918#926#0" expanded="true" />
+            <element signature="e#1513#1521#0" expanded="true" />
+            <element signature="e#2448#2456#0" expanded="true" />
+            <marker date="1444582410265" expanded="true" signature="2903:2942" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2996" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2997" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2999" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3151" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3152" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3175" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3183" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3207" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3265" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3326" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3329" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#759#767#0" expanded="true" />
+            <element signature="e#854#862#0" expanded="true" />
+            <element signature="e#918#926#0" expanded="true" />
+            <element signature="e#1513#1521#0" expanded="true" />
+            <element signature="e#2448#2456#0" expanded="true" />
+            <marker date="1444582410265" expanded="true" signature="2903:2942" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2996" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2997" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2999" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3151" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3152" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3175" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3183" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3207" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3265" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3326" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3329" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#759#767#0" expanded="true" />
+            <element signature="e#854#862#0" expanded="true" />
+            <element signature="e#918#926#0" expanded="true" />
+            <element signature="e#1513#1521#0" expanded="true" />
+            <element signature="e#2448#2456#0" expanded="true" />
+            <marker date="1444582410265" expanded="true" signature="2903:2942" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2996" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2997" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2999" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3151" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3152" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3175" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3183" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3207" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3265" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3326" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3329" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/JavaToMySQL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="14" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#method0#0;class#JavaToMySQL#0" expanded="false" />
+            <marker date="1444515662744" expanded="true" signature="-1:-1" placeholder="select id, n..books..." />
+            <marker date="1444515662744" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#759#767#0" expanded="true" />
+            <element signature="e#854#862#0" expanded="true" />
+            <element signature="e#918#926#0" expanded="true" />
+            <element signature="e#1513#1521#0" expanded="true" />
+            <element signature="e#2448#2456#0" expanded="true" />
+            <marker date="1444582410265" expanded="true" signature="2903:2942" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2996" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2997" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2999" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3151" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3152" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3175" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3183" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3207" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3265" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3326" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3329" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#759#767#0" expanded="true" />
+            <element signature="e#854#862#0" expanded="true" />
+            <element signature="e#918#926#0" expanded="true" />
+            <element signature="e#1513#1521#0" expanded="true" />
+            <element signature="e#2448#2456#0" expanded="true" />
+            <marker date="1444582410265" expanded="true" signature="2903:2942" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2996" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2997" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2999" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3151" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3152" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3175" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3183" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3207" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3265" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3326" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3329" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -521,9 +759,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#method0#0;class#JavaToMySQL#0" expanded="false" />
-            <marker date="1443992618749" expanded="true" signature="539:566" placeholder="select count..Tbtest..." />
-            <marker date="1443992618749" expanded="true" signature="1343:1377" placeholder="select id, n..books..." />
-            <marker date="1443992618749" expanded="true" signature="2250:2361" placeholder="INSERT INTO ..." />
+            <marker date="1444515662744" expanded="true" signature="-1:-1" placeholder="select id, n..books..." />
+            <marker date="1444515662744" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -534,6 +771,23 @@
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#759#767#0" expanded="true" />
+            <element signature="e#854#862#0" expanded="true" />
+            <element signature="e#918#926#0" expanded="true" />
+            <element signature="e#1513#1521#0" expanded="true" />
+            <element signature="e#2448#2456#0" expanded="true" />
+            <marker date="1444582410265" expanded="true" signature="2903:2942" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2996" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2997" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2999" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3151" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3152" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3175" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3183" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3207" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3265" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3326" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3329" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -545,9 +799,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#method0#0;class#JavaToMySQL#0" expanded="false" />
-            <marker date="1443992618749" expanded="true" signature="539:566" placeholder="select count..Tbtest..." />
-            <marker date="1443992618749" expanded="true" signature="1343:1377" placeholder="select id, n..books..." />
-            <marker date="1443992618749" expanded="true" signature="2250:2361" placeholder="INSERT INTO ..." />
+            <marker date="1444515662744" expanded="true" signature="-1:-1" placeholder="select id, n..books..." />
+            <marker date="1444515662744" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -558,6 +811,23 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#759#767#0" expanded="true" />
+            <element signature="e#854#862#0" expanded="true" />
+            <element signature="e#918#926#0" expanded="true" />
+            <element signature="e#1513#1521#0" expanded="true" />
+            <element signature="e#2448#2456#0" expanded="true" />
+            <marker date="1444582410265" expanded="true" signature="2903:2942" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2996" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2997" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2999" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3151" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3152" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3175" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3183" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3207" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3265" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3326" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3329" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -568,6 +838,23 @@
           <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#759#767#0" expanded="true" />
+            <element signature="e#854#862#0" expanded="true" />
+            <element signature="e#918#926#0" expanded="true" />
+            <element signature="e#1513#1521#0" expanded="true" />
+            <element signature="e#2448#2456#0" expanded="true" />
+            <marker date="1444582410265" expanded="true" signature="2903:2942" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2996" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2997" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2999" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3151" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3152" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3175" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3183" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3207" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3265" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3326" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3329" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -578,6 +865,23 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#759#767#0" expanded="true" />
+            <element signature="e#854#862#0" expanded="true" />
+            <element signature="e#918#926#0" expanded="true" />
+            <element signature="e#1513#1521#0" expanded="true" />
+            <element signature="e#2448#2456#0" expanded="true" />
+            <marker date="1444582410265" expanded="true" signature="2903:2942" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2996" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2997" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2999" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3151" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3152" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3175" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3183" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3207" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3265" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3326" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3329" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -588,30 +892,85 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#759#767#0" expanded="true" />
+            <element signature="e#854#862#0" expanded="true" />
+            <element signature="e#918#926#0" expanded="true" />
+            <element signature="e#1513#1521#0" expanded="true" />
+            <element signature="e#2448#2456#0" expanded="true" />
+            <marker date="1444582410265" expanded="true" signature="2903:2942" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2996" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2997" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2999" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3151" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3152" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3175" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3183" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3207" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3265" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3326" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3329" placeholder="INSERT INTO ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Parser.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5445545">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jsoup-1.8.3.jar!/org/jsoup/nodes/Node.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/JavaToMySQL.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#method0#0;class#JavaToMySQL#0" expanded="false" />
-            <marker date="1443992618749" expanded="true" signature="539:566" placeholder="select count..Tbtest..." />
-            <marker date="1443992618749" expanded="true" signature="1343:1377" placeholder="select id, n..books..." />
-            <marker date="1443992618749" expanded="true" signature="2250:2361" placeholder="INSERT INTO ..." />
+            <marker date="1444515662744" expanded="true" signature="-1:-1" placeholder="select id, n..books..." />
+            <marker date="1444515662744" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44493392">
+          <caret line="412" column="0" selection-start-line="412" selection-start-column="0" selection-end-line="412" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52910054">
-          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.6484375">
+          <caret line="66" column="62" selection-start-line="66" selection-start-column="62" selection-end-line="66" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#759#767#0" expanded="true" />
+            <element signature="e#854#862#0" expanded="true" />
+            <element signature="e#918#926#0" expanded="true" />
+            <element signature="e#1513#1521#0" expanded="true" />
+            <element signature="e#2448#2456#0" expanded="true" />
+            <marker date="1444582410265" expanded="true" signature="2903:2942" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2996" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2997" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="2903:2999" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3151" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3152" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3175" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3183" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3207" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3265" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3326" placeholder="INSERT INTO ..." />
+            <marker date="1444582410265" expanded="true" signature="3042:3329" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -681,7 +1040,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>org.jsoup:jsoup:1.8.3</last-edited>
+          <last-edited>mysql:mysql-connector-java:5.1.36</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
