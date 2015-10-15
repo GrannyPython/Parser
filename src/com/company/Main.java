@@ -7,10 +7,6 @@ import java.util.ArrayList;
 import java.sql.SQLException;
 
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-
 public class Main {
     private static final String url = "jdbc:mysql://localhost:3306/MyBase1";
     private static final String user = "root";
@@ -19,24 +15,29 @@ public class Main {
     private static Statement stmt;
     private static ResultSet rs;
 
-
     //http://www.gazeta.spb.ru/2/0/
+    //
+    //String rightString= new String(badString.getBytes("windows-1251"),"utf-8");
+
 
     public static void main(String[] args) throws Exception {
-        String MyLink = "http://www.gazeta.spb.ru/2/0/";
-        ArrayList<String> Links = new ArrayList<String>();
-        Links = PLinks(MyLink);
-        ArrayList<String> LinkAddit = new ArrayList<String>();
+        String MainSiteLink = "http://www.gazeta.spb.ru/2/0/";
+
+        ArrayList<String> LinksFromTheMainSite = new ArrayList<String>();
+
+        LinksFromTheMainSite = GetLinksFromTheMainSite(MainSiteLink);
         ArrayList<String> InfoIntoDB = new ArrayList<String>();
 
-        // for(int i = 0; i < Links.size()-1; i++) {
         int i = 0;
-        LinkAddit.add(MyLink.substring(0, MyLink.length() - 5) + Links.get(i));//delete last slash, remove regexp later
+        ArrayList<String> LinkAddit = new ArrayList<String>();
+        LinkAddit.add(MainSiteLink.substring(0, MainSiteLink.length() - 5) + LinksFromTheMainSite.get(i));//delete last slash, remove regexp later
         InfoIntoDB = ParsePage(LinkAddit.get(i));
         InfoIntoDB.add(0, Integer.toString(i));
         InfoIntoDB.add(LinkAddit.get(i));
-        InfoIntoDB.add(MyLink);
+        InfoIntoDB.add(MainSiteLink);
         PutIntoDB(InfoIntoDB);
+        System.out.println("Total number of news in the table : " + ShowNumOfNewInDB());
+        System.out.println("Total number of news in the table : " + TakeFromDB());
     }
 
     public static ArrayList<String> ParsePage(String ML) throws Exception {
@@ -58,7 +59,7 @@ public class Main {
         return InfoAboutLink;
     }
 
-    public static ArrayList<String> PLinks(String ML) throws Exception {
+    public static ArrayList<String> GetLinksFromTheMainSite(String ML) throws Exception {
         Document doc = Jsoup.connect(ML).get();
         Elements blockTitle = doc.select("div.blockTitle.size14.nonLine");
         Elements OnlyLinks = blockTitle.select("a[href]");
@@ -69,21 +70,63 @@ public class Main {
         return list;
     }
 
-    /*, MyTitle, MyMainText, MyDate, MyLink, MyMainLink*/
-    /*, InfoIntoDB.get[1], InfoIntoDB.get(2), InfoIntoDB.get(3), InfoIntoDB.get(4), InfoIntoDB.get(5)*/
     public static void PutIntoDB(ArrayList<String> InfoIntoDB) throws SQLException {
-      /*  String query = ("INSERT INTO MyBase1.MyTable1 (MyNumber)" +
-                " VALUES (String InfoIntoDB.get(0));");*/
-        /**/
         String query1 = "INSERT INTO MyTable1 (MyNumber, MyTitle, MyMainText, MyDate, MyLink, MyMainLink)" +
-                " VALUES ('"  + InfoIntoDB.get(0) + "', '" + InfoIntoDB.get(0) + "', '" + InfoIntoDB.get(0) + "', '" + InfoIntoDB.get(0) + "', '" + InfoIntoDB.get(0) + "', '" + InfoIntoDB.get(0) + "');";
+                " VALUES ('" + InfoIntoDB.get(0) + "', '" + InfoIntoDB.get(0) + "', '" + InfoIntoDB.get(0) + "', '" + InfoIntoDB.get(0) + "', '" + InfoIntoDB.get(0) + "', '" + InfoIntoDB.get(0) + "');";
+
+       // System.out.println(query1);
+        con = DriverManager.getConnection(url, user, password);
+        stmt = con.createStatement();
+        stmt.executeUpdate(query1);
+    }
+
+    public static ArrayList TakeFromDB() throws SQLException {
+
+        ArrayList<String> ArrayListInformFromDB = new ArrayList<String>();
+        String query1 = "select MyNumber, MyTitle, MyMainText, MyDate, MyLink, MyMainLink from MyTable1";
+        con = DriverManager.getConnection(url, user, password);
+        stmt = con.createStatement();
+        rs = stmt.executeQuery(query1);
+
+        while (rs.next()) {
+            ArrayListInformFromDB.add(rs.getString(1));
+            ArrayListInformFromDB.add(rs.getString(2));
+            ArrayListInformFromDB.add(rs.getString(3));
+            ArrayListInformFromDB.add(rs.getString(4));
+            ArrayListInformFromDB.add(rs.getString(5));
+            ArrayListInformFromDB.add(rs.getString(6));
+        }
 
         System.out.println(query1);
-            con = DriverManager.getConnection(url, user, password);
-            stmt = con.createStatement();
-            stmt.executeUpdate(query1);
+        con = DriverManager.getConnection(url, user, password);
+        stmt = con.createStatement();
+    return ArrayListInformFromDB;
 
     }
-}
 
+    public static  int ShowNumOfNewInDB() {   int count = 0;
+        String query = "select count(*) from MyTable1";
+
+        try {
+            con = DriverManager.getConnection(url, user, password);
+            stmt = con.createStatement();
+            rs = stmt.executeQuery(query);
+
+            while (rs.next()) {
+                count = rs.getInt(1);
+ //               System.out.println("Total number of news in the table : " + count);
+            }
+
+
+        } catch (SQLException sqlEx) {
+            sqlEx.printStackTrace();
+        } finally {
+            try { con.close(); } catch(SQLException se) { /*can't do anything */ }
+            try { stmt.close(); } catch(SQLException se) { /*can't do anything */ }
+            try { rs.close(); } catch(SQLException se) { /*can't do anything */ }
+        }
+        return count;
+    }
+
+}
 
