@@ -23,20 +23,21 @@ public class Main {
     public static void main(String[] args) throws Exception {
         String MainSiteLink = "http://www.gazeta.spb.ru/2/0/";
 
-        ArrayList<String> LinksFromTheMainSite = new ArrayList<String>();
+        ArrayList<String> ArrayLinksFromTheMainSite = new ArrayList<String>();
 
-        LinksFromTheMainSite = GetLinksFromTheMainSite(MainSiteLink);
-        ArrayList<String> InfoIntoDB = new ArrayList<String>();
+        ArrayLinksFromTheMainSite = GetLinksFromTheMainSite(MainSiteLink);
+        ArrayList<String> ArrayInfoIntoDB = new ArrayList<String>();
 
         int i = 0;
-        ArrayList<String> LinkAddit = new ArrayList<String>();
-        LinkAddit.add(MainSiteLink.substring(0, MainSiteLink.length() - 5) + LinksFromTheMainSite.get(i));//delete last slash, remove regexp later
-        InfoIntoDB = ParsePage(LinkAddit.get(i));
-        InfoIntoDB.add(0, Integer.toString(i));
-        InfoIntoDB.add(LinkAddit.get(i));
-        InfoIntoDB.add(MainSiteLink);
-        PutIntoDB(InfoIntoDB);
-        System.out.println("Total number of news in the table : " + ShowNumOfNewInDB());
+
+        ArrayList<String> LinksFromMainSite = new ArrayList<String>();
+        LinksFromMainSite.add(MainSiteLink.substring(0, MainSiteLink.length() - 5) + ArrayLinksFromTheMainSite.get(i));//delete last slash, remove regexp later
+        ArrayInfoIntoDB = ParsePage(LinksFromMainSite.get(i));
+        ArrayInfoIntoDB.add(0, Integer.toString(i));
+        ArrayInfoIntoDB.add(LinksFromMainSite.get(i));
+        ArrayInfoIntoDB.add(MainSiteLink);
+        PutIntoDB(ArrayInfoIntoDB);
+        System.out.println("Total number of news in the table : " + ShowNumOfNewsInDB());
         System.out.println("Total number of news in the table : " + TakeFromDB());
     }
 
@@ -104,7 +105,7 @@ public class Main {
 
     }
 
-    public static  int ShowNumOfNewInDB() {   int count = 0;
+    public static  int ShowNumOfNewsInDB() {   int count = 0;
         String query = "select count(*) from MyTable1";
 
         try {
