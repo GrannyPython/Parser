@@ -14,31 +14,39 @@ public class Main {
     private static Connection con;
     private static Statement stmt;
     private static ResultSet rs;
-
     //http://www.gazeta.spb.ru/2/0/
-    //
-    //String rightString= new String(badString.getBytes("windows-1251"),"utf-8");
 
 
     public static void main(String[] args) throws Exception {
         String MainSiteLink = "http://www.gazeta.spb.ru/2/0/";
-
         ArrayList<String> ArrayLinksFromTheMainSite = new ArrayList<String>();
-
         ArrayLinksFromTheMainSite = GetLinksFromTheMainSite(MainSiteLink);
         ArrayList<String> ArrayInfoIntoDB = new ArrayList<String>();
-
-        int i = 0;
-
         ArrayList<String> LinksFromMainSite = new ArrayList<String>();
-        LinksFromMainSite.add(MainSiteLink.substring(0, MainSiteLink.length() - 5) + ArrayLinksFromTheMainSite.get(i));//delete last slash, remove regexp later
-        ArrayInfoIntoDB = ParsePage(LinksFromMainSite.get(i));
-        ArrayInfoIntoDB.add(0, Integer.toString(i));
-        ArrayInfoIntoDB.add(LinksFromMainSite.get(i));
-        ArrayInfoIntoDB.add(MainSiteLink);
-        PutIntoDB(ArrayInfoIntoDB);
+        String a = TakeLastNewsFromDB();
+
+        for (int i = 0; i < ArrayLinksFromTheMainSite.size(); i++) {
+            System.out.println(a);
+            System.out.println(MainSiteLink.substring(0, MainSiteLink.length() - 5) + ArrayLinksFromTheMainSite.get(i));
+
+            if ((MainSiteLink.substring(0, MainSiteLink.length() - 5) + ArrayLinksFromTheMainSite.get(i)).equals(a))
+            {
+                break;
+            }
+
+            else
+
+            {
+                LinksFromMainSite.add(MainSiteLink.substring(0, MainSiteLink.length() - 5) + ArrayLinksFromTheMainSite.get(i));
+                ArrayInfoIntoDB = ParsePage(LinksFromMainSite.get(i));
+                ArrayInfoIntoDB.add(0, Integer.toString(i));
+                ArrayInfoIntoDB.add(LinksFromMainSite.get(i));
+                ArrayInfoIntoDB.add(MainSiteLink);
+                PutIntoDB(ArrayInfoIntoDB);
+            }
+        }
+
         System.out.println("Total number of news in the table : " + ShowNumOfNewsInDB());
-        System.out.println("Total number of news in the table : " + TakeFromDB());
     }
 
     public static ArrayList<String> ParsePage(String ML) throws Exception {
@@ -73,7 +81,7 @@ public class Main {
 
     public static void PutIntoDB(ArrayList<String> InfoIntoDB) throws SQLException {
         String query1 = "INSERT INTO MyTable1 (MyNumber, MyTitle, MyMainText, MyDate, MyLink, MyMainLink)" +
-                " VALUES ('" + InfoIntoDB.get(0) + "', '" + InfoIntoDB.get(0) + "', '" + InfoIntoDB.get(0) + "', '" + InfoIntoDB.get(0) + "', '" + InfoIntoDB.get(0) + "', '" + InfoIntoDB.get(0) + "');";
+                " VALUES ('" + InfoIntoDB.get(0) + "', '" + InfoIntoDB.get(1) + "', '" + InfoIntoDB.get(2) + "', '" + InfoIntoDB.get(3) + "', '" + InfoIntoDB.get(4) + "', '" + InfoIntoDB.get(5) + "');";
 
        // System.out.println(query1);
         con = DriverManager.getConnection(url, user, password);
@@ -81,7 +89,7 @@ public class Main {
         stmt.executeUpdate(query1);
     }
 
-    public static ArrayList TakeFromDB() throws SQLException {
+    public static ArrayList<String> TakeFromDB() throws SQLException {
 
         ArrayList<String> ArrayListInformFromDB = new ArrayList<String>();
         String query1 = "select MyNumber, MyTitle, MyMainText, MyDate, MyLink, MyMainLink from MyTable1";
@@ -102,10 +110,10 @@ public class Main {
         con = DriverManager.getConnection(url, user, password);
         stmt = con.createStatement();
     return ArrayListInformFromDB;
-
     }
 
-    public static  int ShowNumOfNewsInDB() {   int count = 0;
+    public static  int ShowNumOfNewsInDB() {
+        int count = 0;
         String query = "select count(*) from MyTable1";
 
         try {
@@ -115,11 +123,9 @@ public class Main {
 
             while (rs.next()) {
                 count = rs.getInt(1);
- //               System.out.println("Total number of news in the table : " + count);
             }
-
-
-        } catch (SQLException sqlEx) {
+        }
+        catch (SQLException sqlEx) {
             sqlEx.printStackTrace();
         } finally {
             try { con.close(); } catch(SQLException se) { /*can't do anything */ }
@@ -129,5 +135,18 @@ public class Main {
         return count;
     }
 
+    public static String TakeLastNewsFromDB() throws SQLException {
+        String LinkOfLastNewsInDB = null;
+        String query1 = "select * FROM MyTable1 WHERE MyNumber = 0";
+
+        con = DriverManager.getConnection(url, user, password);
+        stmt = con.createStatement();
+        rs = stmt.executeQuery(query1);
+
+        while (rs.next()) {
+           LinkOfLastNewsInDB =  ((rs.getString(5)));
+        }
+        return LinkOfLastNewsInDB;
+    }
 }
 
