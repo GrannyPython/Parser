@@ -63,9 +63,7 @@ public class Main {
         InfoAboutLink.add(s);
         //time on main page
         Elements Time = doc1.select("i");
-        String Time_Text = Time.get(0).textNodes().toString();
-        //!!!////////////////////////////////////////////////////////
-        System.out.println(Time_Text);
+        String Time_Text = Time.get(0).textNodes().toString().replace("&nbsp;"," ");
         InfoAboutLink.add(Time_Text);
         return InfoAboutLink;
     }
