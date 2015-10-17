@@ -18,7 +18,7 @@ public class Main {
 
 
     public static void main(String[] args) throws Exception {
-        String MainSiteLink = "http://www.gazeta.spb.ru/2/0/";
+        String MainSiteLink = "http://www.gazeta.spb.ru/allnews/";
         ArrayList<String> ArrayLinksFromTheMainSite = new ArrayList<String>();
         ArrayLinksFromTheMainSite = GetLinksFromTheMainSite(MainSiteLink);
         ArrayList<String> ArrayInfoIntoDB = new ArrayList<String>();
@@ -27,9 +27,9 @@ public class Main {
 
         for (int i = 0; i < ArrayLinksFromTheMainSite.size(); i++) {
             System.out.println(a);
-            System.out.println(MainSiteLink.substring(0, MainSiteLink.length() - 5) + ArrayLinksFromTheMainSite.get(i));
+            System.out.println(MainSiteLink.substring(0, MainSiteLink.length() - 9) + ArrayLinksFromTheMainSite.get(i));
 
-            if ((MainSiteLink.substring(0, MainSiteLink.length() - 5) + ArrayLinksFromTheMainSite.get(i)).equals(a))
+            if ((MainSiteLink.substring(0, MainSiteLink.length() - 9) + ArrayLinksFromTheMainSite.get(i)).equals(a))
             {
                 break;
             }
@@ -37,7 +37,7 @@ public class Main {
             else
 
             {
-                LinksFromMainSite.add(MainSiteLink.substring(0, MainSiteLink.length() - 5) + ArrayLinksFromTheMainSite.get(i));
+                LinksFromMainSite.add(MainSiteLink.substring(0, MainSiteLink.length() - 9) + ArrayLinksFromTheMainSite.get(i));
                 ArrayInfoIntoDB = ParsePage(LinksFromMainSite.get(i));
                 ArrayInfoIntoDB.add(0, Integer.toString(i));
                 ArrayInfoIntoDB.add(LinksFromMainSite.get(i));
@@ -49,8 +49,8 @@ public class Main {
         System.out.println("Total number of news in the table : " + ShowNumOfNewsInDB());
     }
 
-    public static ArrayList<String> ParsePage(String ML) throws Exception {
-        Document doc1 = Jsoup.connect(ML).get();
+    public static ArrayList<String> ParsePage(String MainLink) throws Exception {
+        Document doc1 = Jsoup.connect(MainLink).get();
         ArrayList<String> InfoAboutLink = new ArrayList<String>();
 
         Elements Header = doc1.select("h1");//title
@@ -70,13 +70,13 @@ public class Main {
 
     public static ArrayList<String> GetLinksFromTheMainSite(String ML) throws Exception {
         Document doc = Jsoup.connect(ML).get();
-        Elements blockTitle = doc.select("div.blockTitle.size14.nonLine");
+        Elements blockTitle = doc.select("div.materials.nonLine");
         Elements OnlyLinks = blockTitle.select("a[href]");
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> ArrayOfLinks = new ArrayList<String>();
         for (int i = 0; i < OnlyLinks.size() - 1; i++) {
-            list.add(((OnlyLinks.get(i)).attr("href").toString()));//href
+            ArrayOfLinks.add(((OnlyLinks.get(i)).attr("href").toString()));//href
         }
-        return list;
+        return ArrayOfLinks;
     }
 
     public static void PutIntoDB(ArrayList<String> InfoIntoDB) throws SQLException {

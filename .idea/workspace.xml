@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a031cc83-3349-407d-bef7-01b86062ce5f" name="New changelist" comment="Исправлена глупая ошибка загрузки в бд. &#10;Теперь подгрудаем все ссылки и проверяем есть ли данная новость в бд.">
+    <list default="true" id="a031cc83-3349-407d-bef7-01b86062ce5f" name="New changelist" comment="Исправлена ошибка вывода даты в бд.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Parser/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/Parser/com/company/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -21,7 +22,7 @@
     <SUITE FILE_PATH="coverage/Parser$Main.coverage" NAME="Main Coverage Results" MODIFIED="1444948101807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -32,32 +33,35 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37261146">
-              <caret line="59" column="49" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.3312102">
+              <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#862#870#0" expanded="true" />
-                <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+                <element signature="e#722#730#0" expanded="true" />
+                <element signature="e#866#874#0" expanded="true" />
+                <element signature="e#937#945#0" expanded="true" />
+                <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+                <element signature="e#3128#3136#0" expanded="true" />
                 <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
                 <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
                 <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
                 <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-                <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-                <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-                <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-                <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-                <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-                <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-                <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-                <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-                <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-                <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-                <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-                <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-                <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-                <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-                <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-                <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+                <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+                <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+                <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+                <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+                <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+                <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+                <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+                <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+                <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+                <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+                <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+                <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+                <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+                <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+                <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+                <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
               </folding>
             </state>
           </provider>
@@ -492,7 +496,7 @@
       <workItem from="1444943526351" duration="9178000" />
       <workItem from="1444994165835" duration="5796000" />
       <workItem from="1445008460940" duration="18897000" />
-      <workItem from="1445074726663" duration="2133000" />
+      <workItem from="1445074726663" duration="6650000" />
     </task>
     <task id="LOCAL-00001" summary="New changelist">
       <changelist id="a031cc83-3349-407d-bef7-01b86062ce5f" name="New changelist" comment="" />
@@ -531,12 +535,24 @@
       <option name="project" value="LOCAL" />
       <updated>1445036580813</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Исправлена ошибка вывода даты в бд.">
+      <created>1445076923096</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1445076923096</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Исправлена ошибка вывода даты в бд. Теперь вывод корректен для дальнейшей работы.">
+      <created>1445079481089</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1445079481089</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <option name="trackContextForNewChangelist" value="true" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124173000" />
+    <option name="totallyTimeSpent" value="128690000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="718" extended-state="4" />
@@ -559,7 +575,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16935484" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42592594" sideWeight="0.49115044" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42592594" sideWeight="0.49115044" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -586,7 +602,9 @@
     <MESSAGE value="Добавлены методы работы с БД, в частности вывож количество строк в бд, считывание строк.&#10;" />
     <MESSAGE value="Переменные названы в соответствии с функционалом.&#10;" />
     <MESSAGE value="Исправлена глупая ошибка загрузки в бд. &#10;Теперь подгрудаем все ссылки и проверяем есть ли данная новость в бд." />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлена глупая ошибка загрузки в бд. &#10;Теперь подгрудаем все ссылки и проверяем есть ли данная новость в бд." />
+    <MESSAGE value="Исправлена ошибка вывода даты в бд." />
+    <MESSAGE value="Исправлена ошибка вывода даты в бд. Теперь вывод корректен для дальнейшей работы." />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлена ошибка вывода даты в бд. Теперь вывод корректен для дальнейшей работы." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -598,8 +616,20 @@
           <properties />
           <option name="timeStamp" value="74" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="75" />
+      <option name="time" value="79" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -626,28 +656,31 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -658,28 +691,31 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -690,28 +726,31 @@
           <caret line="62" column="23" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -722,28 +761,31 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -754,28 +796,31 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -786,28 +831,31 @@
           <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -818,28 +866,31 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -850,28 +901,31 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -882,28 +936,31 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -914,28 +971,31 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -946,28 +1006,31 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -978,28 +1041,31 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -1010,28 +1076,31 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -1042,28 +1111,31 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -1074,28 +1146,31 @@
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -1106,28 +1181,31 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -1138,28 +1216,31 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -1170,28 +1251,31 @@
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -1202,28 +1286,31 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -1234,28 +1321,31 @@
           <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -1266,28 +1356,31 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -1298,28 +1391,31 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
@@ -1355,32 +1451,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37261146">
-          <caret line="59" column="49" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.3312102">
+          <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#862#870#0" expanded="true" />
-            <element signature="method#GetLinksFromTheMainSite#0;class#Main#0" expanded="false" />
+            <element signature="e#722#730#0" expanded="true" />
+            <element signature="e#866#874#0" expanded="true" />
+            <element signature="e#937#945#0" expanded="true" />
+            <element signature="method#ParsePage#0;class#Main#0" expanded="false" />
+            <element signature="e#3128#3136#0" expanded="true" />
             <element signature="method#PutIntoDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeFromDB#0;class#Main#0" expanded="false" />
             <element signature="method#ShowNumOfNewsInDB#0;class#Main#0" expanded="false" />
             <element signature="method#TakeLastNewsLinkFromDB#0;class#Main#0" expanded="false" />
-            <marker date="1445076833425" expanded="true" signature="3490:3599" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3600" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3622" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3630" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3654" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3712" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3773" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="3490:3776" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4210" placeholder="select MyNum..." />
-            <marker date="1445076833425" expanded="true" signature="4133:4211" placeholder="select MyNum..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="4139:4210" placeholder="INSERT INTO ..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5024" placeholder="select count..books..." />
-            <marker date="1445076833425" expanded="true" signature="5003:5032" placeholder="select count..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5842" placeholder="select MyLin..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5819:5860" placeholder="select * FRO..MyTable1..." />
-            <marker date="1445076833425" expanded="true" signature="5825:5842" placeholder="SELECT * FRO..table..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3544" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3545" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3567" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3575" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3599" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3657" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3718" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="3435:3721" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4155" placeholder="select MyNum..." />
+            <marker date="1445086702864" expanded="true" signature="4078:4156" placeholder="select MyNum..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="4084:4155" placeholder="INSERT INTO ..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4969" placeholder="select count..books..." />
+            <marker date="1445086702864" expanded="true" signature="4948:4977" placeholder="select count..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5787" placeholder="select MyLin..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5764:5805" placeholder="select * FRO..MyTable1..." />
+            <marker date="1445086702864" expanded="true" signature="5770:5787" placeholder="SELECT * FRO..table..." />
           </folding>
         </state>
       </provider>
