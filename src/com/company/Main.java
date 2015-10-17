@@ -23,7 +23,7 @@ public class Main {
         ArrayLinksFromTheMainSite = GetLinksFromTheMainSite(MainSiteLink);
         ArrayList<String> ArrayInfoIntoDB = new ArrayList<String>();
         ArrayList<String> LinksFromMainSite = new ArrayList<String>();
-        String a = TakeLastNewsFromDB();
+        String a = TakeLastNewsLinkFromDB();
 
         for (int i = 0; i < ArrayLinksFromTheMainSite.size(); i++) {
             System.out.println(a);
@@ -63,7 +63,9 @@ public class Main {
         InfoAboutLink.add(s);
         //time on main page
         Elements Time = doc1.select("i");
-        String Time_Text = Time.get(1).textNodes().toString();
+        String Time_Text = Time.get(0).textNodes().toString();
+        //!!!////////////////////////////////////////////////////////
+        System.out.println(Time_Text);
         InfoAboutLink.add(Time_Text);
         return InfoAboutLink;
     }
@@ -135,7 +137,7 @@ public class Main {
         return count;
     }
 
-    public static String TakeLastNewsFromDB() throws SQLException {
+    public static String TakeLastNewsLinkFromDB() throws SQLException {
         String LinkOfLastNewsInDB = null;
         String query1 = "select * FROM MyTable1 WHERE MyNumber = 0";
 
