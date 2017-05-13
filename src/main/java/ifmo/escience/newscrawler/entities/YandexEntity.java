@@ -13,11 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class RootEntity extends WebEntity {
+public class YandexEntity extends NewsPage {
     Random rand = new Random();
     HtmlUnitDriver driver = new HtmlUnitDriver();
 
-    public RootEntity(WebEntity from) {
+    public YandexEntity(NewsPage from) {
         this.newsListPath = from.newsListPath;
         this.entityName = from.entityName;
         this.entityUrl = from.entityUrl;

@@ -14,9 +14,9 @@ import java.util.List;
 
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class WebEntity extends Thread {
+public class NewsPage extends Thread {
 
-    protected static Logger logger = LogManager.getLogger(WebEntity.class.getName());
+    protected static Logger logger = LogManager.getLogger(NewsPage.class.getName());
     protected String entityName,
             entityUrl,
             newsListPath,
@@ -27,10 +27,10 @@ public class WebEntity extends Thread {
             similarNews = "",
             regExpForDate,
             dateFormat;
-    protected long refreshTimeout;
+    private long refreshTimeout;
 
-    protected Crawler crawler;
-    protected WebPageParser parser = new WebPageParser(new ArrayList<>(), this);
+    Crawler crawler;
+    private WebPageParser parser = new WebPageParser(this);
 
 
     static {
@@ -59,7 +59,7 @@ public class WebEntity extends Thread {
     protected List<String> getLinks(String targetUrl) throws Exception {
         List<String> arrayOfWebPages = new ArrayList<>();
         HtmlUnitDriver driver = new HtmlUnitDriver();
-        logger.error("Loading links from: " + targetUrl);
+        logger.info("Loading links from: " + targetUrl);
         driver.get(targetUrl);
         if (newsListPath != "") {
             List<WebElement> links = driver.findElements(By.xpath(newsListPath));

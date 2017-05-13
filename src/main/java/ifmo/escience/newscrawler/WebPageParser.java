@@ -1,6 +1,6 @@
 package ifmo.escience.newscrawler;
 
-import ifmo.escience.newscrawler.entities.WebEntity;
+import ifmo.escience.newscrawler.entities.NewsPage;
 import org.apache.commons.logging.LogFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,16 +17,15 @@ import java.util.logging.Level;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
 public class WebPageParser {
-    HtmlUnitDriver driver;
+    HtmlUnitDriver driver = new HtmlUnitDriver();
 
     private static Logger logger = LogManager.getLogger(WebPageParser.class.getName());
 
     DBConnection dbConnection = new DBConnection();
 
     private List<String> webLinks;
-    private WebEntity entity;
+    private NewsPage entity;
 
     static {
         LogFactory.getFactory().setAttribute("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.NoOpLog");
@@ -36,14 +35,9 @@ public class WebPageParser {
         java.util.logging.Logger.getLogger("org.apache.commons.httpclient").setLevel(Level.OFF);
     }
 
-    public WebPageParser(List<String> arrayOfWebPage, WebEntity entity) {
-
-        this.webLinks = arrayOfWebPage;
+    public WebPageParser(NewsPage entity) {
+        this.webLinks = new ArrayList<>();
         this.entity = entity;
-        driver = new HtmlUnitDriver();
-//        Proxy proxy = new Proxy();
-//        proxy.setHttpProxy("proxy.ifmo.ru:3128");
-//        driver.setProxySettings(proxy);
     }
 
     public void addPage(String page) {
@@ -106,7 +100,6 @@ public class WebPageParser {
             newPage.setSimilarNews(similarLinks.toString());
             dbConnection.insert(newPage);
         }
-
     }
 
     private String checkWords(String date, String datePattern) throws ParseException {

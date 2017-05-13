@@ -21,7 +21,6 @@ public class DBConnection {
             doc.append("Number", page.parseTime()).append("Title", page.getArticleName()).append("MainText", page.getArticleText());
             doc.append("Date", page.getArticleDate()).append("Link", page.getPageUrl()).append("MainLink", page.getEntityUrl());
             coll.insert(doc);
-//            System.out.println("Document inserted successfully");
         } catch (Exception ex) {
             logger.error("Error on loading news into database!", ex);
         }
@@ -51,12 +50,13 @@ public class DBConnection {
         }
     }
 
-    public static void getDbConfigs() {
+    public static void initConfigs() {
         String dbHost = ConfigReader.getProperty("dbHost");
         Integer dbPort = Integer.parseInt(ConfigReader.getProperty("dbPort"));
         String dbName = ConfigReader.getProperty("dbName");
         String dbCollection = ConfigReader.getProperty("dbCollection");
         String dbMissingCollection = ConfigReader.getProperty("dbMissingCollection");
+
         mongoClient = new MongoClient(dbHost, dbPort);
         db = mongoClient.getDB(dbName);
         coll = db.getCollection(dbCollection);
