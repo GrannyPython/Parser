@@ -15,12 +15,10 @@ public class ConfigReader {
     private static final String configFileName = "config.properties";
     private static Logger logger = LogManager.getLogger(ConfigReader.class.getName());
 
-    public static String getProperty(String name) throws IOException {
-        FileInputStream inputStream = null;
+    public static String getProperty(String name) {
         String property = null;
-        try {
+        try (FileInputStream inputStream = new FileInputStream(configFileName)) {
             Properties properties = new Properties();
-            inputStream = new FileInputStream(configFileName);
             properties.load(inputStream);
             property = properties.getProperty(name);
             return property;
@@ -28,9 +26,8 @@ public class ConfigReader {
             logger.error("Config file not found!", ex);
         } catch (IOException ex) {
             logger.error("Error on reading parameter!", ex);
-        } finally {
-            inputStream.close();
         }
         return property;
     }
+
 }

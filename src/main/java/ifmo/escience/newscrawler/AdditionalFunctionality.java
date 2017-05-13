@@ -14,9 +14,8 @@ import java.util.List;
 
 public class AdditionalFunctionality {
 
-    private static String path = "/home/gp/Desktop/DicWithTeacher/resources/news.json";
-
     public static void main(String[] args) throws IOException, ParseException, InterruptedException {
+        String path = "/home/gp/Desktop/DicWithTeacher/resources/news.json";
         String[] a = readText(path);
     }
 

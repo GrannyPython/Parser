@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
  */
 public class ProxyManager {
     private static ProxyManager instance;
-    private static Set<String> proxySet = new HashSet<String>();
+    private static Set<String> proxySet = new HashSet<>();
     private static Set<String> workableSet = new HashSet<>();
     private static Iterator<String> itr;
 

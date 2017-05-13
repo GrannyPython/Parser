@@ -7,7 +7,6 @@ import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
-import java.io.IOException;
 import java.net.SocketTimeoutException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -18,7 +17,7 @@ public class RootEntity extends WebEntity {
     Random rand = new Random();
     HtmlUnitDriver driver = new HtmlUnitDriver();
 
-    public RootEntity(WebEntity from) throws IOException {
+    public RootEntity(WebEntity from) {
         this.newsListPath = from.newsListPath;
         this.entityName = from.entityName;
         this.entityUrl = from.entityUrl;
@@ -74,8 +73,9 @@ public class RootEntity extends WebEntity {
 
     @Override
     protected List<String> getLinks(String targetUrl) throws Exception {
-        List<String> arrayOfWebPages = new ArrayList<>();
         logger.trace("Loading links from: " + targetUrl);
+
+        List<String> arrayOfWebPages = new ArrayList<>();
         Proxy proxy = new Proxy();
         String proxyFromSet = ProxyManager.getProxy();
         proxy.setSslProxy(proxyFromSet);

@@ -4,3 +4,5 @@
 *.iws
 log/
 target/
+/parser.iml
+/.idea/

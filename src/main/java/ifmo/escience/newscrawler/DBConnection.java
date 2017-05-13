@@ -8,8 +8,6 @@ import ifmo.escience.newscrawler.helpers.ConfigReader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.IOException;
-
 public class DBConnection {
     static MongoClient mongoClient;
     static DB db;
@@ -54,18 +52,14 @@ public class DBConnection {
     }
 
     public static void getDbConfigs() {
-        try {
-            String dbHost = ConfigReader.getProperty("dbHost");
-            Integer dbPort = Integer.parseInt(ConfigReader.getProperty("dbPort"));
-            String dbName = ConfigReader.getProperty("dbName");
-            String dbCollection = ConfigReader.getProperty("dbCollection");
-            String dbMissingCollection = ConfigReader.getProperty("dbMissingCollection");
-            mongoClient = new MongoClient(dbHost, dbPort);
-            db = mongoClient.getDB(dbName);
-            coll = db.getCollection(dbCollection);
-            missingCollection = db.getCollection(dbMissingCollection);
-        } catch (IOException ex) {
-            logger.error("Error on initializing database connection!", ex);
-        }
+        String dbHost = ConfigReader.getProperty("dbHost");
+        Integer dbPort = Integer.parseInt(ConfigReader.getProperty("dbPort"));
+        String dbName = ConfigReader.getProperty("dbName");
+        String dbCollection = ConfigReader.getProperty("dbCollection");
+        String dbMissingCollection = ConfigReader.getProperty("dbMissingCollection");
+        mongoClient = new MongoClient(dbHost, dbPort);
+        db = mongoClient.getDB(dbName);
+        coll = db.getCollection(dbCollection);
+        missingCollection = db.getCollection(dbMissingCollection);
     }
 }

@@ -16,58 +16,59 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Crawler {
-    Logger logger = LogManager.getLogger(Crawler.class.getName());
+    private Logger logger = LogManager.getLogger(Crawler.class.getName());
     private Map<String, WebEntity> webEntities;
-    DBConnection dbConnection = new DBConnection();
+    private DBConnection dbConnection = new DBConnection();
+    ObjectMapper mapper = new ObjectMapper();
 
-    public ArrayList<WebEntity> getEntitiesList(String cfgPath) {
+    private List<WebEntity> getEntitiesList(String cfgPath) {
+        List<WebEntity> webEntityList = new ArrayList<>();
         try {
-            ObjectMapper mapper = new ObjectMapper();
-            ArrayList<WebEntity> webEntityList = mapper.readValue(new File(cfgPath),
+            webEntityList = mapper.readValue(new File(cfgPath),
                     mapper.getTypeFactory().constructCollectionType(ArrayList.class, WebEntity.class));
-            return webEntityList;
         } catch (IOException ex) {
             logger.error("Error on getting links from config!", ex);
-            return null;
         }
+        return webEntityList;
     }
 
-    public void start() throws IOException, InterruptedException {
+    void start() throws IOException, InterruptedException {
         ArrayList<RootEntity> rootEntities = new ArrayList<RootEntity>();
-        ArrayList<WebEntity> rootEntitiesBase = getEntitiesList("config.json");
+        List<WebEntity> rootEntitiesBase = getEntitiesList("config.json");
         for (WebEntity rootBase : rootEntitiesBase) {
             rootEntities.add(new RootEntity(rootBase));
         }
-        ArrayList<WebEntity> webEntities = getEntitiesList("multiConfig.json");
+        List<WebEntity> webEntities = getEntitiesList("multiConfig.json");
         if (webEntities == null) {
             logger.error("List of entities in empty!");
             return;
         }
         fillMap(webEntities);
 
-        for (int i = 0; i < webEntities.size(); i++) {
-            webEntities.get(i).start();
-            logger.info("Thread for " + webEntities.get(i).getEntityName() + " was created");
+        for (WebEntity webEntity : webEntities) {
+            webEntity.start();
+            logger.info("Thread for " + webEntity.getEntityName() + " was created");
         }
         logger.info("Starting root entities...");
-        for (int i = 0; i < rootEntities.size(); i++) {
-            rootEntities.get(i).setCrawler(this);
-            rootEntities.get(i).start();
-            logger.info("Thread for " + rootEntities.get(i).getEntityName() + " was created");
+        for (RootEntity rootEntity : rootEntities) {
+            rootEntity.setCrawler(this);
+            rootEntity.start();
+            logger.info("Thread for " + rootEntity.getEntityName() + " was created");
         }
     }
 
-    private void fillMap(ArrayList<WebEntity> webEntityList) {
-        webEntities = new HashMap<String, WebEntity>();
-        for (int i = 0; i < webEntityList.size(); i++) {
-            String entityUrl = webEntityList.get(i).getEntityUrl();
+    private void fillMap(List<WebEntity> webEntityList) {
+        webEntities = new HashMap<>();
+        for (WebEntity aWebEntityList : webEntityList) {
+            String entityUrl = aWebEntityList.getEntityUrl();
             entityUrl = getUrlStd(entityUrl);
-            webEntityList.get(i).setCrawler(this);
-            webEntities.put(entityUrl, webEntityList.get(i));
+            aWebEntityList.setCrawler(this);
+            webEntities.put(entityUrl, aWebEntityList);
         }
     }
 
     private String getUrlStd(String url) {
+        //TODO: wtf is it?
         String urlRegex = "((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=\\+\\$,\\w]+@)?" +
                 "[A-Za-z0-9.-]+|(?:www.|[-;:&=\\+\\$,\\w]+@)[A-Za-z0-9.-]+)" +
                 "((?:\\/[\\+~%\\/.\\w-_]*)?\\??(?:[-\\+=&;%@.\\w_]*)#?(?:[.\\!\\/\\\\w]*))?)";
