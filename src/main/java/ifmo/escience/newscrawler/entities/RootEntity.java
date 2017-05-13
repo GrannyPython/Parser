@@ -17,6 +17,7 @@ import java.util.Random;
 public class RootEntity extends WebEntity {
     Random rand = new Random();
     HtmlUnitDriver driver = new HtmlUnitDriver();
+
     public RootEntity(WebEntity from) throws IOException {
         this.newsListPath = from.newsListPath;
         this.entityName = from.entityName;
@@ -27,7 +28,7 @@ public class RootEntity extends WebEntity {
     @Override
     public void run() {
         int syncDays = 60;
-        int  time = 45_000 + rand.nextInt(30_000) + 1;
+        int time = 45_000 + rand.nextInt(30_000) + 1;
 
         StringBuffer addon = new StringBuffer();
         try {
@@ -46,33 +47,30 @@ public class RootEntity extends WebEntity {
                         addon.append("&to_year=" + String.valueOf(currentDate.getYear()));
                         addon.append("&p=" + String.valueOf(page));
                         List<String> links = null;
+                        do {
                             do {
-                                do {
-                                    try {
-                                        Thread.sleep(2_000);
-                                        links = getLinks(addon.toString());
-                                    } catch (SocketTimeoutException exception) {
-                                        System.out.println("BadProxy1");
-                                    } catch (ConnectTimeoutException exception) {
-                                        System.out.println("Bad proxy2");
-                                    } catch (Exception e) {
-                                        System.out.println("BadProxy3");
-                                    }
-                                } while (links == null);
-                            }while (links.isEmpty());
+                                try {
+                                    Thread.sleep(2_000);
+                                    links = getLinks(addon.toString());
+                                } catch (SocketTimeoutException exception) {
+                                    System.out.println("BadProxy1");
+                                } catch (ConnectTimeoutException exception) {
+                                    System.out.println("Bad proxy2");
+                                } catch (Exception e) {
+                                    System.out.println("BadProxy3");
+                                }
+                            } while (links == null);
+                        } while (links.isEmpty());
                         Thread.sleep(time);
                     }
                     currentDate = newDate;
                 }
             }
-        }
-
-        catch(Exception ex)
-        {
+        } catch (Exception ex) {
             logger.error("Error on collecting web pages!", ex);
         }
 
-}
+    }
 
     @Override
     protected List<String> getLinks(String targetUrl) throws Exception {
@@ -85,7 +83,7 @@ public class RootEntity extends WebEntity {
         driver.get(targetUrl);
 
         List<WebElement> links = driver.findElements(By.xpath(newsListPath));
-        if (links.size()>0) {
+        if (links.size() > 0) {
             for (WebElement link : links) {
                 String href = link.getAttribute("href");
                 arrayOfWebPages.add(href);

@@ -27,7 +27,7 @@ public class WebPageParser {
 
     private List<String> webLinks;
     private WebEntity entity;
-    
+
     static {
         LogFactory.getFactory().setAttribute("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.NoOpLog");
         java.util.logging.Logger.getLogger("com.gargoylesoftware").setLevel(Level.OFF);
@@ -96,9 +96,9 @@ public class WebPageParser {
             }
 
             String date = driver.findElement(By.xpath(entity.getArticleDatePath())).getText();
-            String articleDate = (checkWords(doRegExp(date.replaceAll("\n"," ")), entity.getDateFormat()));
-            System.out.println(articleDate + " " + newPage.getPageUrl() + "\n" +Header + "\n" + Body
-                    + "\n" + Tags + similarLinks );
+            String articleDate = (checkWords(doRegExp(date.replaceAll("\n", " ")), entity.getDateFormat()));
+            System.out.println(articleDate + " " + newPage.getPageUrl() + "\n" + Header + "\n" + Body
+                    + "\n" + Tags + similarLinks);
 
             newPage.setArticleName(Header);
             newPage.setArticleText(Body);
@@ -108,18 +108,19 @@ public class WebPageParser {
         }
 
     }
+
     private String checkWords(String date, String datePattern) throws ParseException {
         String hour, minute, day, month, year;
         LocalDateTime now = LocalDateTime.now();
         date = date.toLowerCase().replaceAll(",", " ").replaceAll(" +", " ").replaceAll("-", " ").trim();
         Calendar calendar = Calendar.getInstance(); // this would default to now
 
-        if ((date.contains("cегодня"))|(date.contains("сегодня"))){
+        if ((date.contains("cегодня")) | (date.contains("сегодня"))) {
             year = String.valueOf(now.getYear());
             day = String.valueOf(String.format("%02d", now.getDayOfMonth()));
             month = String.valueOf(String.format("%02d", now.getMonthValue()));
             String a = day + "." + month + "." + year;
-            date = date.replaceAll("сегодня", a).replaceAll("сегодня", a).replaceAll("[)(]","");
+            date = date.replaceAll("сегодня", a).replaceAll("сегодня", a).replaceAll("[)(]", "");
         }
 
         if (date.toLowerCase().contains("вчера")) {
@@ -128,7 +129,7 @@ public class WebPageParser {
             //System.out.println("date = [" + date + "], datePattern = [" + datePattern + "]");
             year = String.valueOf(now.getYear());
             day = String.valueOf(String.format("%02d", calendar.getTime().getDate()));
-            month = String.valueOf(String.format("%02d", calendar.getTime().getMonth()+1));
+            month = String.valueOf(String.format("%02d", calendar.getTime().getMonth() + 1));
             String a = day + "." + month + "." + year;
             date = date.replaceAll("вчера", a);
         }
@@ -139,17 +140,16 @@ public class WebPageParser {
 
             Date dateFinal = dateFormat.parse(date);
 
-            if (datePattern.contains("yyyy")){
-                year = String.valueOf(dateFinal.getYear()+1900);
-            }
-            else {
+            if (datePattern.contains("yyyy")) {
+                year = String.valueOf(dateFinal.getYear() + 1900);
+            } else {
                 year = String.valueOf(now.getYear());
             }
 
             day = String.valueOf(String.format("%02d", dateFinal.getDate()));
             month = String.valueOf(String.format("%02d", dateFinal.getMonth() + 1));
             hour = String.valueOf(String.format("%02d", dateFinal.getHours()));
-            if( Integer.parseInt(hour) < 0)
+            if (Integer.parseInt(hour) < 0)
                 hour = String.valueOf((24 + Integer.parseInt(hour)));
             minute = String.valueOf(String.format("%02d", dateFinal.getMinutes()));
             date = day + "." + month + "." + year + " " + hour + ":" + minute;
@@ -167,15 +167,14 @@ public class WebPageParser {
 
     private String doRegExp(String date) {
 
-            List<String> allMatches = new ArrayList<String>();
-            Matcher m = Pattern.compile(entity.getRegExpForDate()).matcher(date);
-            while (m.find()) {
-                allMatches.add(m.group());
-            }
-
-            return allMatches.size() > 0 ? allMatches.get(0) : date;
+        List<String> allMatches = new ArrayList<String>();
+        Matcher m = Pattern.compile(entity.getRegExpForDate()).matcher(date);
+        while (m.find()) {
+            allMatches.add(m.group());
         }
 
+        return allMatches.size() > 0 ? allMatches.get(0) : date;
+    }
 
 
     private String articleTextProcessing(String text, WebPage page) {

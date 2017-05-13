@@ -20,7 +20,7 @@ public class Main {
     private static Logger logger = LogManager.getLogger(Main.class.getName());
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        /*try{
+        try{
             DBConnection.getDbConfigs();
             Crawler crawler = new Crawler();
             logger.trace("Crawler has started working");
@@ -28,7 +28,7 @@ public class Main {
         }
         catch(Exception ex){
             logger.trace("Error on starting crawling", ex);
-        }*/
+        }
 //        String text = "";
 //
 //        text = text.replaceAll("[,.!\"«\']"," ").replaceAll("\n"," ");

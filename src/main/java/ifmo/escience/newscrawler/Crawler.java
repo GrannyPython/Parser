@@ -2,10 +2,11 @@ package ifmo.escience.newscrawler;
 
 import ifmo.escience.newscrawler.entities.RootEntity;
 import ifmo.escience.newscrawler.entities.WebEntity;
-import java.io.File;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.codehaus.jackson.map.ObjectMapper;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,21 +14,19 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import org.codehaus.jackson.map.ObjectMapper;
 
 public class Crawler {
-    Logger logger =  LogManager.getLogger(Crawler.class.getName());
+    Logger logger = LogManager.getLogger(Crawler.class.getName());
     private Map<String, WebEntity> webEntities;
     DBConnection dbConnection = new DBConnection();
-    
+
     public ArrayList<WebEntity> getEntitiesList(String cfgPath) {
-        try{
+        try {
             ObjectMapper mapper = new ObjectMapper();
             ArrayList<WebEntity> webEntityList = mapper.readValue(new File(cfgPath),
-                mapper.getTypeFactory().constructCollectionType(ArrayList.class, WebEntity.class));
+                    mapper.getTypeFactory().constructCollectionType(ArrayList.class, WebEntity.class));
             return webEntityList;
-        }
-        catch(IOException ex){
+        } catch (IOException ex) {
             logger.error("Error on getting links from config!", ex);
             return null;
         }
@@ -36,11 +35,11 @@ public class Crawler {
     public void start() throws IOException, InterruptedException {
         ArrayList<RootEntity> rootEntities = new ArrayList<RootEntity>();
         ArrayList<WebEntity> rootEntitiesBase = getEntitiesList("config.json");
-        for(WebEntity rootBase : rootEntitiesBase){
+        for (WebEntity rootBase : rootEntitiesBase) {
             rootEntities.add(new RootEntity(rootBase));
         }
         ArrayList<WebEntity> webEntities = getEntitiesList("multiConfig.json");
-        if(webEntities == null){
+        if (webEntities == null) {
             logger.error("List of entities in empty!");
             return;
         }
@@ -85,24 +84,22 @@ public class Crawler {
             WebEntity entityForLink = webEntities.get(linkUrl);
             entityForLink.transmitToParser(link);
             return true;
-        }
-        else{
+        } else {
             dbConnection.addMissingLink(linkUrl);
             return false;
         }
     }
 
 
-
     public void addLinks(List<String> links) {
         float goodLinks = 0;
         for (int i = 0; i < links.size(); i++) {
             boolean res = routeLink(links.get(i));
-            if(res)
+            if (res)
                 goodLinks++;
         }
         if (!links.isEmpty())
-            System.out.println(goodLinks/links.size()*100);
+            System.out.println(goodLinks / links.size() * 100);
 
     }
 

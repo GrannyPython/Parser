@@ -17,15 +17,15 @@ import java.util.List;
 public class WebEntity extends Thread {
 
     protected static Logger logger = LogManager.getLogger(WebEntity.class.getName());
-    protected String entityName, 
-            entityUrl, 
-            newsListPath, 
-            articleNamePath, 
-            articleDatePath, 
-            articleTextPath, 
-            tags = "", 
+    protected String entityName,
+            entityUrl,
+            newsListPath,
+            articleNamePath,
+            articleDatePath,
+            articleTextPath,
+            tags = "",
             similarNews = "",
-            regExpForDate, 
+            regExpForDate,
             dateFormat;
     protected long refreshTimeout;
 
@@ -37,15 +37,15 @@ public class WebEntity extends Thread {
         java.util.logging.Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(java.util.logging.Level.SEVERE);
     }
 
-    public void setCrawler(Crawler crawler){
+    public void setCrawler(Crawler crawler) {
         this.crawler = crawler;
     }
-    
-    public void transmitToParser(String link){
+
+    public void transmitToParser(String link) {
         parser.addPage(link);
     }
-    
-    public void transmitToCrawler(List<String> links){
+
+    public void transmitToCrawler(List<String> links) {
         crawler.addLinks(links);
     }
 
@@ -61,7 +61,7 @@ public class WebEntity extends Thread {
         HtmlUnitDriver driver = new HtmlUnitDriver();
         logger.error("Loading links from: " + targetUrl);
         driver.get(targetUrl);
-        if(newsListPath!=""){
+        if (newsListPath != "") {
             List<WebElement> links = driver.findElements(By.xpath(newsListPath));
 
             for (WebElement link : links) {
@@ -77,10 +77,10 @@ public class WebEntity extends Thread {
     public void run() {
         try {
             List<String> links = getLinks(this.entityUrl);
-            for(String link : links){
+            for (String link : links) {
                 parser.addPage(link);
             }
-            while(true){
+            while (true) {
                 parser.parse();
                 Thread.sleep(refreshTimeout);
             }

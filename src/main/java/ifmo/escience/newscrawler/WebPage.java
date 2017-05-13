@@ -1,7 +1,5 @@
 package ifmo.escience.newscrawler;
 
-import ifmo.escience.newscrawler.entities.WebEntity;
-
 public class WebPage {
     private Long parseTime;
     private String entityUrl;
@@ -31,16 +29,19 @@ public class WebPage {
     public Long parseTime() {
         return parseTime;
     }
-    
+
     public void setParseTime(Long parseTime) {
         this.parseTime = parseTime;
     }
+
     public void setArticleName(String articleName) {
         this.articleName = articleName;
     }
+
     public void setArticleDate(String articleDate) {
         this.articleDate = articleDate;
     }
+
     public void setArticleText(String articleText) {
         this.articleText = articleText;
     }
@@ -48,18 +49,23 @@ public class WebPage {
     public String getEntityUrl() {
         return entityUrl;
     }
+
     public String getPageUrl() {
         return pageUrl;
     }
+
     public String getArticleName() {
         return articleName;
     }
+
     public String getArticleDate() {
         return articleDate;
     }
+
     public String getArticleText() {
         return articleText;
     }
+
     public WebPage(String pageUrl) {
         this.pageUrl = pageUrl;
     }

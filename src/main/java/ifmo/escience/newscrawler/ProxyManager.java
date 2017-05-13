@@ -18,6 +18,7 @@ public class ProxyManager {
     private static Set<String> proxySet = new HashSet<String>();
     private static Set<String> workableSet = new HashSet<>();
     private static Iterator<String> itr;
+
     ProxyManager() {
         itr = proxySet.iterator();
     }
@@ -45,12 +46,10 @@ public class ProxyManager {
         }
 
         if (!itr.hasNext()) {
-            if (workableSet.size() == 0)
-            {
+            if (workableSet.size() == 0) {
                 proxySet = updateSet();
 
-            }
-            else {
+            } else {
                 proxySet = workableSet;
                 workableSet.clear();
             }
@@ -63,8 +62,7 @@ public class ProxyManager {
         return id;
     }
 
-    public static synchronized void feedBack(String workableId)
-    {
+    public static synchronized void feedBack(String workableId) {
         workableSet.add(workableId);
     }
 }

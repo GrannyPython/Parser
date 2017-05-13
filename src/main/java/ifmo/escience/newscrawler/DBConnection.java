@@ -15,49 +15,46 @@ public class DBConnection {
     static DB db;
     static DBCollection coll;
     static DBCollection missingCollection;
-    static Logger logger =  LogManager.getLogger(DBConnection.class.getName());
+    static Logger logger = LogManager.getLogger(DBConnection.class.getName());
 
     public void insert(WebPage page) {
-        try{
+        try {
             BasicDBObject doc = new BasicDBObject();
-            doc.append("Number",page.parseTime()).append("Title", page.getArticleName()).append("MainText", page.getArticleText());
-            doc.append("Date", page.getArticleDate()).append("Link", page.getPageUrl()).append("MainLink",page.getEntityUrl());
+            doc.append("Number", page.parseTime()).append("Title", page.getArticleName()).append("MainText", page.getArticleText());
+            doc.append("Date", page.getArticleDate()).append("Link", page.getPageUrl()).append("MainLink", page.getEntityUrl());
             coll.insert(doc);
 //            System.out.println("Document inserted successfully");
-        }
-        catch(Exception ex){
+        } catch (Exception ex) {
             logger.error("Error on loading news into database!", ex);
         }
     }
 
-    public boolean exists(String pageUrl ){
+    public boolean exists(String pageUrl) {
         return (coll.find(new BasicDBObject("Link", pageUrl)).count()) > 0 ? true : false;
     }
-    
-    public void addMissingLink(String link){
-        try{
+
+    public void addMissingLink(String link) {
+        try {
             BasicDBObject document = (BasicDBObject) missingCollection.findOne(new BasicDBObject("url", link));
-        if(document != null){
-            System.out.println(document);
-            BasicDBObject newDocument =
-                    new BasicDBObject().append("$inc",
-                            new BasicDBObject().append("count", 1));
-            missingCollection.update(new BasicDBObject().append("url", link), newDocument);
-        }
-        else{
-            document = new BasicDBObject();
-            document.append("url", link);
-            document.append("count", 1);
-            missingCollection.insert(document);
-        }
-        }
-        catch(Exception ex){
+            if (document != null) {
+                System.out.println(document);
+                BasicDBObject newDocument =
+                        new BasicDBObject().append("$inc",
+                                new BasicDBObject().append("count", 1));
+                missingCollection.update(new BasicDBObject().append("url", link), newDocument);
+            } else {
+                document = new BasicDBObject();
+                document.append("url", link);
+                document.append("count", 1);
+                missingCollection.insert(document);
+            }
+        } catch (Exception ex) {
             logger.error("Error on adding missing link!", ex);
         }
     }
 
     public static void getDbConfigs() {
-        try{
+        try {
             String dbHost = ConfigReader.getProperty("dbHost");
             Integer dbPort = Integer.parseInt(ConfigReader.getProperty("dbPort"));
             String dbName = ConfigReader.getProperty("dbName");
@@ -67,8 +64,7 @@ public class DBConnection {
             db = mongoClient.getDB(dbName);
             coll = db.getCollection(dbCollection);
             missingCollection = db.getCollection(dbMissingCollection);
-        }
-        catch(IOException ex){
+        } catch (IOException ex) {
             logger.error("Error on initializing database connection!", ex);
         }
     }
