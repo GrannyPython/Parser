@@ -75,7 +75,7 @@ public class YandexEntity extends NewsPage {
     protected List<String> getLinks(String targetUrl) throws Exception {
         logger.trace("Loading links from: " + targetUrl);
 
-        List<String> arrayOfWebPages = new ArrayList<>();
+        List<String> linksList = new ArrayList<>();
         Proxy proxy = new Proxy();
         String proxyFromSet = ProxyManager.getProxy();
         proxy.setSslProxy(proxyFromSet);
@@ -86,11 +86,11 @@ public class YandexEntity extends NewsPage {
         if (links.size() > 0) {
             for (WebElement link : links) {
                 String href = link.getAttribute("href");
-                arrayOfWebPages.add(href);
+                linksList.add(href);
             }
             ProxyManager.feedBack(proxyFromSet);
-            crawler.addLinks(arrayOfWebPages);
+            crawler.addLinks(linksList);
         }
-        return arrayOfWebPages;
+        return linksList;
     }
 }

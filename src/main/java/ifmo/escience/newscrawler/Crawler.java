@@ -21,17 +21,6 @@ public class Crawler {
     private DBConnection dbConnection = new DBConnection();
     static ObjectMapper mapper = new ObjectMapper();
 
-    private static List<NewsPage> getEntitiesList(String cfgPath) {
-        List<NewsPage> newsPageList = new ArrayList<>();
-        try {
-            newsPageList = mapper.readValue(new File(cfgPath),
-                    mapper.getTypeFactory().constructCollectionType(ArrayList.class, NewsPage.class));
-        } catch (IOException ex) {
-            logger.error("Error on getting links from config!", ex);
-        }
-        return newsPageList;
-    }
-
     public static void main(String[] args) throws IOException, InterruptedException {
         DBConnection.initConfigs();
         initEntities();
@@ -41,6 +30,11 @@ public class Crawler {
         ArrayList<YandexEntity> rootEntities = new ArrayList<>();
         for (NewsPage rootBase : getEntitiesList("config.json")) {
             rootEntities.add(new YandexEntity(rootBase));
+        }
+        logger.info("Starting root entities...");
+        for (YandexEntity yandexEntity : rootEntities) {
+            yandexEntity.start();
+            logger.info("Thread for " + yandexEntity.getEntityName() + " was created");
         }
 
         List<NewsPage> webEntities = getEntitiesList("multiConfig.json");
@@ -54,13 +48,18 @@ public class Crawler {
             newsPage.start();
             logger.info("Thread for " + newsPage.getEntityName() + " was created");
         }
-        logger.info("Starting root entities...");
-        for (YandexEntity yandexEntity : rootEntities) {
-            yandexEntity.start();
-            logger.info("Thread for " + yandexEntity.getEntityName() + " was created");
-        }
     }
 
+    private static List<NewsPage> getEntitiesList(String cfgPath) {
+        List<NewsPage> newsPageList = new ArrayList<>();
+        try {
+            newsPageList = mapper.readValue(new File(cfgPath),
+                    mapper.getTypeFactory().constructCollectionType(ArrayList.class, NewsPage.class));
+        } catch (IOException ex) {
+            logger.error("Error on getting links from config!", ex);
+        }
+        return newsPageList;
+    }
 
     private static String getUrlStd(String url) {
         //TODO: wtf is it?
@@ -90,8 +89,7 @@ public class Crawler {
     public void addLinks(List<String> links) {
         float goodLinks = 0;
         for (int i = 0; i < links.size(); i++) {
-            boolean res = routeLink(links.get(i));
-            if (res)
+            if (routeLink(links.get(i)))
                 goodLinks++;
         }
         if (!links.isEmpty())

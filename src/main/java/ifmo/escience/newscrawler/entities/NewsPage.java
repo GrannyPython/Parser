@@ -57,7 +57,7 @@ public class NewsPage extends Thread {
     }
 
     protected List<String> getLinks(String targetUrl) throws Exception {
-        List<String> arrayOfWebPages = new ArrayList<>();
+        List<String> linksList = new ArrayList<>();
         HtmlUnitDriver driver = new HtmlUnitDriver();
         logger.info("Loading links from: " + targetUrl);
         driver.get(targetUrl);
@@ -66,17 +66,17 @@ public class NewsPage extends Thread {
 
             for (WebElement link : links) {
                 String href = link.getAttribute("href");
-                arrayOfWebPages.add(href);
+                linksList.add(href);
             }
         }
 
-        return arrayOfWebPages;
+        return linksList;
     }
 
     @Override
     public void run() {
         try {
-            List<String> links = getLinks(this.entityUrl);
+            List<String> links = getLinks(entityUrl);
             for (String link : links) {
                 parser.addPage(link);
             }
